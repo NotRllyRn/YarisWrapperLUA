@@ -116,7 +116,7 @@ info = { --// removes user successfully
 ### API.getUser()
 * gets a users info w/ their tag
 ```lua
-local info =  yaris:getUser("user_tag", optional_callback)
+local info = yaris:getUser("user_tag", optional_callback)
 
 info = { --// successfully retrieved info
     success = true,
@@ -134,7 +134,7 @@ info = { --// successfully retrieved info
 ### API.editUser()
 * edits a users data using some sort of data (usually hwid)
 ```lua
-local info = . yaris:editUser({
+local info = yaris:editUser({
     data = "user_data",     --// unhashed or hashed
     hashed = false,         --// [OPTIONAL] change this accordingling to the data field.
     tag = "new_user_tag",   --// [OPTIONAL]
@@ -150,7 +150,7 @@ info = { --// successfully edited user.
 ### API.whitelistUser()
 * whitelists a user using their user id
 ```lua
-local info =  yaris:whitelistUser({
+local info = yaris:whitelistUser({
     data = "user_data", --// hashed or unhashed
     hashed = false, --// [OPTIONAL] change this accordingling to the data field.
 }, optional_callback)
@@ -163,7 +163,7 @@ info = { --// successfully whitelised
 ### API.blacklistUser()
 * blacklists a user using their user id w/ a reason (optional)
 ```lua
-local info =  yaris:blacklistUser(({
+local info = yaris:blacklistUser(({
     data = "user_data", --// hashed or unhashed
     reason = "", --// [OPTIONAL]
     hashed = false, --// [OPTIONAL] change this accordingling to the data field.
@@ -177,7 +177,7 @@ info = { --// successfully blacklisted
 ### API.addKey()
 * generates a key for your whitelist
 ```lua
-local info =  yaris:addKey(optional_callback)
+local info = yaris:addKey(optional_callback)
 
 info = { --// successfully generated a key
     success = true,
@@ -190,7 +190,7 @@ info = { --// successfully generated a key
 ### API.removeKey()
 * generates a key for your whitelist
 ```lua
-local info =  yaris:removeKey("key", optional_callback)
+local info = yaris:removeKey("key", optional_callback)
 
 info = { --// successfully removed specified key
     success = true,
