@@ -1,6 +1,6 @@
 # Yaris API wrapper for Roblox LUAU Exploiting
 
-If you're looking for a Node.lua version of this, go [here](https://www.npmlua.com/package/yaris-wrapper).
+If you're looking for a Node.js version of this, go [here](https://www.npmlua.com/package/yaris-wrapper).
 
 ### Information:
 This is a API wrapper for Yaris whitelisting system located [here](https://yaris:rocks/beta/). This is intended to help you use their API endpoint system without you hassling around with messy fetch code. Source code [here](https://github.com/NotRllyRn/YarisWrapper).
