@@ -1,5 +1,22 @@
 local httpService = game:GetService("HttpService")
-local base = {}
+local base = {
+    setKey = function(self, key)
+        if not self.apiKey then
+            self.apiKey = key
+        end
+    end,
+    setInfo = function(self, info)
+        if not self.information then
+            self.information = info
+        end
+    end,
+    Info = function(self)
+        return self.information
+    end,
+    handleCallback = function(self, info, callback)
+        return (callback and (type(callback) == "function") and callback(info)) or info
+    end,
+}
 
 function ExploitCheck(name, ...)
 	local found
@@ -68,24 +85,6 @@ base["apiFetch"] = function(self, endpoint, data)
 			},
 		}
 	end
-end
-
-base["handleCallback"] = function(self, info, callback)
-	return (callback and (type(callback) == "function") and callback(info)) or info
-end
-
-base["setKey"] = function(self, key)
-	if not self.apiKey then
-		self.apiKey = key
-	end
-end
-base["setInfo"] = function(self, info)
-	if not self.information then
-		self.information = info
-	end
-end
-base["Info"] = function(self)
-	return self.information
 end
 
 setrawmetatable(base, {
