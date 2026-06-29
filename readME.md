@@ -1,3 +1,7 @@
+# Archived
+
+This repository has been archived.
+
 # Yaris API wrapper for Roblox LUAU Exploiting
 
 If you're looking for a Node.js version of this, go [here](https://www.npmlua.com/package/yaris-wrapper).
